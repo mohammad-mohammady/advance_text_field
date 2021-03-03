@@ -1,0 +1,20 @@
+name: advance_text_field
+description: an advance text field.
+version: 0.0.1
+author: mohammad mohammady<mohammad.mohammady.73@gmail.com>
+homepage:
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
