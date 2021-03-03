@@ -5,18 +5,6 @@ a customizable text field.
 
 ![Demo](https://user-images.githubusercontent.com/32927238/109797078-40e97380-7c19-11eb-8e91-bec72b5bbffd.gif)
 https://user-images.githubusercontent.com/32927238/109796605-a5580300-7c18-11eb-8a76-534df2b0cbec.mov
-  final double width, height;
-  final Color backgroundColor, color, textColor, textHintColor;
-  final TextStyle textHintStyle, textStyle;
-  final AdvanceTextFieldType type;
-  final Widget editLabel;
-  final Widget saveLabel;
-  final Duration animationDuration;
-  final TextInputType keyboardType;
-  final String textHint, text;
-  final TextEditingController controller;
-  final Function onEditTap;
-  final Function(String text) onSaveTap;
 
 | Property | Description |
 | --- | --- |
