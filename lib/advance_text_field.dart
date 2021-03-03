@@ -3,17 +3,43 @@ library advance_text_field;
 import 'package:flutter/material.dart';
 
 class AdvanceTextField extends StatefulWidget {
+  /// The widget's [width] and [height].
   final double width, height;
+
+  /// The widget's [backgroundColor] and [color].
+  /// Colors of [textColor] and [textHintColor]
   final Color backgroundColor, color, textColor, textHintColor;
+
+  /// Style of text hint[textHintStyle] and text[textStyle].
   final TextStyle textHintStyle, textStyle;
+
+  /// Type of AdvanceTextField with two option:
+  /// [AdvanceTextFieldType.EDIT],
+  /// [AdvanceTextFieldType.EDIT] for initial state.
   final AdvanceTextFieldType type;
+
+  /// a widget will using for Edit Button. it can be any Flutter [Widget]s.
   final Widget editLabel;
+
+  /// a widget will using for Save Button. it can be any Flutter [Widget]s.
   final Widget saveLabel;
+
+  /// an instance of [Duration] for Duration of animations.
   final Duration animationDuration;
+
+  /// Keyboard type of [AdvanceTextField].
   final TextInputType keyboardType;
+
+  /// Text hint and text of [AdvanceTextField].
   final String textHint, text;
+
+  /// Text editing controller.
   final TextEditingController controller;
+
+  /// Call when tap on [editLabel].
   final Function onEditTap;
+
+  /// Call when tap on [saveLabel].
   final Function(String text) onSaveTap;
 
   const AdvanceTextField(
@@ -43,19 +69,27 @@ class AdvanceTextField extends StatefulWidget {
 }
 
 class _AdvanceTextFieldState extends State<AdvanceTextField> {
+
+  /// Right widget is [widget.saveLabel] and left widget is [widget.editLabel].
   Widget _leftWidget = Container(), _rightWidget = Container();
 
   TextEditingController _editingController = TextEditingController();
 
   AdvanceTextFieldType _type;
 
+  /// Use when border should be fully rounded(circular).
   final _roundedCorner = 10000.0;
+
+  /// Radius's of [AnimatedContainer] corners.
   double _topRightRadius;
   double _topLeftRadius;
   double _bottomLeftRadius;
   double _bottomRightRadius;
 
+  /// Width of [AnimatedContainer].
   double _innerContainerWidth;
+
+  /// Width of widget container.
   double _widgetWidth;
 
   bool _enable;
@@ -143,6 +177,8 @@ class _AdvanceTextFieldState extends State<AdvanceTextField> {
     );
   }
 
+  /// Change widget state to
+  /// [AdvanceTextFieldType.EDIT] or [AdvanceTextFieldType.SAVE].
   _make(AdvanceTextFieldType type) {
     _type = type;
     setState(() {
@@ -169,6 +205,8 @@ class _AdvanceTextFieldState extends State<AdvanceTextField> {
     });
   }
 
+
+  /// Inner Container fill when change type of widget.
   fill() {
     setState(() {
       _innerContainerWidth = _widgetWidth - 4;
@@ -179,6 +217,7 @@ class _AdvanceTextFieldState extends State<AdvanceTextField> {
     });
   }
 
+  /// Save widget [_rightWidget].
   Widget _saveWidget() {
     return InkWell(
       onTap: () {
@@ -200,6 +239,8 @@ class _AdvanceTextFieldState extends State<AdvanceTextField> {
     );
   }
 
+
+  /// Edit widget [_leftWidget].
   Widget _editWidget() {
     return InkWell(
       onTap: () {
@@ -222,4 +263,5 @@ class _AdvanceTextFieldState extends State<AdvanceTextField> {
   }
 }
 
+/// Type of [AdvanceTextField] states
 enum AdvanceTextFieldType { EDIT, SAVE, FILL }
