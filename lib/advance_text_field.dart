@@ -69,7 +69,6 @@ class AdvanceTextField extends StatefulWidget {
 }
 
 class _AdvanceTextFieldState extends State<AdvanceTextField> {
-
   /// Right widget is [widget.saveLabel] and left widget is [widget.editLabel].
   Widget _leftWidget = Container(), _rightWidget = Container();
 
@@ -205,7 +204,6 @@ class _AdvanceTextFieldState extends State<AdvanceTextField> {
     });
   }
 
-
   /// Inner Container fill when change type of widget.
   fill() {
     setState(() {
@@ -238,7 +236,6 @@ class _AdvanceTextFieldState extends State<AdvanceTextField> {
       ),
     );
   }
-
 
   /// Edit widget [_leftWidget].
   Widget _editWidget() {

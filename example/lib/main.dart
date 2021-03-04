@@ -40,11 +40,19 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             AdvanceTextField(
               type: AdvanceTextFieldType.EDIT,
-              editLabel: Icon(Icons.edit,color: Colors.white,),
-              saveLabel: Icon(Icons.check,color: Colors.white,),
+              editLabel: Icon(
+                Icons.edit,
+                color: Colors.white,
+              ),
+              saveLabel: Icon(
+                Icons.check,
+                color: Colors.white,
+              ),
               textHint: 'Something...',
-              onEditTap: (){},
-              onSaveTap: (text){print('value is: $text');},
+              onEditTap: () {},
+              onSaveTap: (text) {
+                print('value is: $text');
+              },
             )
           ],
         ),
