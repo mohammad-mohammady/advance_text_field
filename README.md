@@ -27,7 +27,7 @@ an advance text field for flutter, customizable and contain two button for save 
 | `onEditTap` | When user tap on edit button onEditTap will call |
 | `onSaveTap` | When user tap on save button onSaveTap will call  |
 
-# advance_text_field
+
 
 Usage
 -----
@@ -50,3 +50,6 @@ AdvanceTextField(
   },
 )
 ```
+
+# advance_text_field
+
