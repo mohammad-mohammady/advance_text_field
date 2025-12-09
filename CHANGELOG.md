@@ -10,3 +10,7 @@
 
 * Format codes.
 * Add Sample.
+
+## [0.0.6] - 9 December 2025.
+
+* upgrade to null safety.
